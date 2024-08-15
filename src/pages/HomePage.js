@@ -1,15 +1,19 @@
 import React from "react";
 import { MealsContainer } from "../containers/MealsContainer";
 import { mockMeals } from "../assets/mockData";
-
-export default HomePage
+import TopbarContainer from "../containers/TopbarContainer";
+import SidebarContainer from "../containers/SidebarContainer";
+export default HomePage;
 
 function HomePage() {
   return (
-  <div>
-      <div>HomePage component loaded</div>
-      <MealsContainer data={mockMeals.meals}/>
+    <div className="container-fluid">
+      <TopbarContainer />
+      <div className="d-flex">
+        <SidebarContainer />
+        <MealsContainer data={mockMeals.meals} />
       </div>
-  )
+    </div>
+  );
 }
 //TODO DE COMPLETAT AICI DIN INREGISTRAREA VIDEO!!!!!//

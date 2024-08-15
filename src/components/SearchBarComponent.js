@@ -1,9 +1,8 @@
 import React from "react";
 
-<div
-      className="container-fluid d-grid gap-3 align-items-center"
-      style="grid-template-columns: 1fr 2fr;"
-    >
+export default function SearchBarComponent() {
+  return (
+    <div className="container-fluid d-flex gap-3 align-items-center p-2">
       <div className="dropdown">
         <a
           href="#"
@@ -14,7 +13,8 @@ import React from "react";
           LOGO
         </a>
       </div>
-<div className="d-flex align-items-center">
+
+      <div className="d-flex ms-auto w-50 align-items-center">
         <input
           type="search"
           className="form-control"
@@ -23,3 +23,5 @@ import React from "react";
         />
       </div>
     </div>
+  );
+}
