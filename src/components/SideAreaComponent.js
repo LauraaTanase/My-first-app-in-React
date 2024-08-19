@@ -1,21 +1,36 @@
 import React from "react";
 
-const SidebarComponent = () => {
+const SideAreaComponent = () => {
   const meals = [
-    { strCategory: "Beef" },
-    { strCategory: "Breakfast" },
-    { strCategory: "Chicken" },
-    { strCategory: "Dessert" },
-    { strCategory: "Goat" },
-    { strCategory: "Lamb" },
-    { strCategory: "Miscellaneous" },
-    { strCategory: "Pasta" },
-    { strCategory: "Pork" },
-    { strCategory: "Seafood" },
-    { strCategory: "Side" },
-    { strCategory: "Starter" },
-    { strCategory: "Vegan" },
-    { strCategory: "Vegetarian" },
+    { strArea: "American" },
+    { strArea: "British" },
+    { strArea: "Canadian" },
+    { strArea: "Chinese" },
+    { strArea: "Croatian" },
+    { strArea: "Dutch" },
+    { strArea: "Egyptian" },
+    { strArea: "Filipino" },
+    { strArea: "French" },
+    { strArea: "Greek" },
+    { strArea: "Indian" },
+    { strArea: "Irish" },
+    { strArea: "Italian" },
+    { strArea: "Jamaican" },
+    { strArea: "Japanese" },
+    { strArea: "Kenyan" },
+    { strArea: "Malaysian" },
+    { strArea: "Mexican" },
+    { strArea: "Moroccan" },
+    { strArea: "Polish" },
+    { strArea: "Portuguese" },
+    { strArea: "Russian" },
+    { strArea: "Spanish" },
+    { strArea: "Thai" },
+    { strArea: "Tunisian" },
+    { strArea: "Turkish" },
+    { strArea: "Ukrainian" },
+    { strArea: "Unknown" },
+    { strArea: "Vietnamese" },
   ];
 
   return (
@@ -33,7 +48,7 @@ const SidebarComponent = () => {
           aria-expanded="false"
           style={{ boxShadow: "none" }} // Elimină umbrele, dacă sunt prezente
         >
-          Categories
+          Areas
         </a>
         <ul
           className="dropdown-menu"
@@ -47,7 +62,7 @@ const SidebarComponent = () => {
                 href="#"
                 style={{ padding: "0.5rem 1rem", background: "none" }}
               >
-                {meal.strCategory}
+                {meal.strArea}
               </a>
             </li>
           ))}
@@ -56,5 +71,4 @@ const SidebarComponent = () => {
     </div>
   );
 };
-
-export default SidebarComponent;
+export default SideAreaComponent;

@@ -1,9 +1,13 @@
 import React from "react";
 import SidebarComponent from "../components/SidebarComponent";
+import SideAreaComponent from "../components/SideAreaComponent";
 
 export default function () {
   return (
-   <SidebarComponent/>
+    <div>
+      <SidebarComponent />
+      <SideAreaComponent />
+    </div>
   );
 }
 
