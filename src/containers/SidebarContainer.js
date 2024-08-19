@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'; // Adaugă acest import
 
 export default function () {
   return (
-    <div>
+    <div className>
        <Link
         to="/FavoritesPage"
         className="btn bg-white text-start border-bottom text-dark fw-bold px-0 rounded-0"

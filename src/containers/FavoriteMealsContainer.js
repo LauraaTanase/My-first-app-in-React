@@ -1,26 +1,30 @@
 import React from "react";
-import MealComponent  from "../components/MealComponent";
+import MealComponent from "../components/MealComponent";
 
-const FavoriteMealsContainer = ({ meals }) => {
-    return (
+const FavoriteMealsContainer = ({ data }) => {
+  return (
+    <div>
       <div className="px-4 py-5 my-5 text-center">
         <h1 className="display-5 fw-bold">Your bookmarked Meals!</h1>
         <div className="col-lg-12 mx-auto">
           <p className="lead fs-2 mb-4">Your most wanted meals!</p>
           <div className="row row-gap-4">
-            {meals &&
-              meals.map((meal) => (
+            {data && data.length > 0 ? (
+              data.map((meal) => (
                 <MealComponent
                   title={meal.strMeal}
                   imageSRC={meal.strMealThumb}
-                  key={Math.random()}
-                  idMeal={meal.idMeal}
+                  key={meal.idMeal}
                 />
-              ))}
+              ))
+            ) : (
+              <p>No favorite meals available.</p>
+            )}
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default FavoriteMealsContainer;
+export default FavoriteMealsContainer;
