@@ -8,7 +8,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import SidebarContainer from "./containers/SidebarContainer";
-
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
       {/* De obicei, sidebar-ul și header-ul ar fi în afara Routes */}
       <div className="app">
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Ruta principală */}
-          <Route path="/favorites" element={<FavoritesPage />} /> {/* Ruta pentru pagina de favorite */}
-          {/* Adaugă alte rute dacă este necesar */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>
       </div>
     </Router>
