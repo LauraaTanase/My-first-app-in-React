@@ -14,7 +14,7 @@ const mealCard = {
   borderRadius: "10px",
 };
 
-export const MealComponent = ({ strMeal, strMealThumb }) => {
+ const MealComponent = ({ strMeal, strMealThumb }) => {
   return (
     <div className="col">
       <div className="card flex-row">
@@ -31,3 +31,4 @@ export const MealComponent = ({ strMeal, strMealThumb }) => {
     </div>
   );
 };
+ export default MealComponent;

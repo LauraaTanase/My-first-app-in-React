@@ -1,5 +1,5 @@
 import React from "react";
-import { MealComponent } from "../components/MealComponent";
+import MealComponent from "../components/MealComponent";
 
 const mealContainer = {
   display: "flex",
@@ -11,7 +11,7 @@ export const MealsContainer = (props) => {
   console.log(props.data);
   return (
     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-      {props.data
+      {props.data 
         ? props.data.map((meal) => (
             <MealComponent
               key={meal.idMeal}

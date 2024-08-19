@@ -1,10 +1,17 @@
 import React from "react";
 import SidebarComponent from "../components/SidebarComponent";
 import SideAreaComponent from "../components/SideAreaComponent";
+import { Link } from 'react-router-dom'; // Adaugă acest import
 
 export default function () {
   return (
     <div>
+       <Link
+        to="/FavoritesPage"
+        className="btn bg-white text-start border-bottom text-dark fw-bold px-0 rounded-0"
+      >
+        ♡ Favorites
+      </Link>
       <SidebarComponent />
       <SideAreaComponent />
     </div>
