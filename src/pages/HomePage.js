@@ -16,4 +16,3 @@ function HomePage() {
     </div>
   );
 }
-//TODO DE COMPLETAT AICI DIN INREGISTRAREA VIDEO!!!!!//

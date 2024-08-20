@@ -13,10 +13,8 @@ const FavoritesPage = () => {
 
   return (
     <div>
-      <h1>Your Favorite Meals</h1>
       <FavoriteMealsContainer data={meals} />
     </div>
   );
 };
-
 export default FavoritesPage;

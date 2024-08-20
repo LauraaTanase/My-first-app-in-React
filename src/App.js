@@ -16,9 +16,9 @@ function App() {
       {/* De obicei, sidebar-ul și header-ul ar fi în afara Routes */}
       <div className="app">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<PageNotFound />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </Router>
