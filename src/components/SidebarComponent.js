@@ -19,35 +19,30 @@ const SidebarComponent = () => {
   ];
 
   return (
-    <div
-      className="d-flex flex-column flex-shrink-0 p-3 bg-light"
-      style={{ width: "250px" }}
-    >
+    <div className="d-flex flex-column flex-shrink-0 p-3 bg-light">
       <div className="dropdown">
         <a
           className="dropdown-toggle btn btn-light"
           href="#"
-          role="button"
-          id="dropdownMenuLink"
+          id="dropdownMenuButton"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style={{ boxShadow: "none" }} // Elimină umbrele, dacă sunt prezente
         >
           Categories
         </a>
         <ul
-          className="dropdown-menu"
-          aria-labelledby="dropdownMenuLink"
-          style={{ boxShadow: "none", border: "none" }}
+          className="dropdown-menu w-100"
+          aria-labelledby="dropdownMenuButton"
         >
           {meals.map((meal, index) => (
             <li key={index}>
               <a
-                className="dropdown-item"
+                className="dropdown-item d-flex justify-content-between align-items-center"
                 href="#"
-                style={{ padding: "0.5rem 1rem", background: "none" }}
               >
                 {meal.strCategory}
+                <span className="badge bg-secondary">12</span>{" "}
+               
               </a>
             </li>
           ))}
