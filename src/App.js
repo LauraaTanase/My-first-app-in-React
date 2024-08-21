@@ -13,7 +13,6 @@ import PageNotFound from "./pages/PageNotFound";
 function App() {
   return (
     <Router>
-      {/* De obicei, sidebar-ul și header-ul ar fi în afara Routes */}
       <div className="app">
         <Routes>
         <Route path="/" element={<HomePage />} />
