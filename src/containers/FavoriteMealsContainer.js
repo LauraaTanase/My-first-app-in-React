@@ -3,24 +3,27 @@ import MealComponent from "../components/MealComponent";
 
 const FavoriteMealsContainer = ({ data }) => {
   return (
-    <div>
+    <div className="container">
       <div className="px-4 py-5 my-5 text-center">
-        <h1 className="display-5 fw-bold">Your bookmarked Meals!</h1>
+        <h1 className="display-5 fw-bold">Your Bookmarked Meals!</h1>
         <div className="col-lg-12 mx-auto">
-          <p className="lead fs-2 mb-4">Your most wanted meals!</p>
-          <div className="row row-gap-4">
-            {data && data.length > 0 ? (
-              data.map((meal) => (
-                <MealComponent
-                  title={meal.strMeal}
-                  imageSRC={meal.strMealThumb}
-                  key={meal.idMeal}
-                />
-              ))
-            ) : (
-              <p>No favorite meals available.</p>
-            )}
-          </div>
+          {data && data.length > 0 ? (
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {data.map((meal) => (
+                <div className="col" key={meal.idMeal}>
+                  <MealComponent
+                    title={meal.strMeal}
+                    imageSRC={meal.strMealThumb}
+                    id={meal.idMeal}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="alert alert-warning fs-4">
+              No favorite meals available. Start bookmarking your favorites!
+            </div>
+          )}
         </div>
       </div>
     </div>

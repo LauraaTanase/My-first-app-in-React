@@ -7,7 +7,6 @@ import MealComponent from "./components/MealComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-
 import HomePage from "./pages/HomePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import PageNotFound from "./pages/PageNotFound";
@@ -18,11 +17,12 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/meals" element={<HomePage />} />
-        <Route path="/meals/:idMeal" element={<MealPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/meals" element={<HomePage />} />
+          <Route path="/meals/:idMeal" element={<MealPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </Router>
