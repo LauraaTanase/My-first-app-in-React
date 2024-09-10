@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const SideAreaComponent = () => {
   const meals = [
     { strArea: "American", count: 12 },
@@ -34,35 +35,38 @@ const SideAreaComponent = () => {
   ];
 
   return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 bg-light">
-      <div className="dropdown">
-        <a
-          className="dropdown-toggle btn btn-light"
-          href="#"
-          id="dropdownMenuButton"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Areas
-        </a>
-        <ul
-          className="dropdown-menu w-100"
-          aria-labelledby="dropdownMenuButton"
-        >
-          {meals.map((meal, index) => (
-            <li key={index}>
-              <a
-                className="dropdown-item d-flex justify-content-between align-items-center"
-                href="#"
-              >
-                {meal.strArea}
-                <span className="badge bg-secondary">{meal.count}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div
+    className="d-flex flex-column flex-shrink-0 p-3 bg-light"
+
+  >
+    <div className="dropdown">
+      <a
+        className="dropdown-toggle btn btn-light"
+        href="#"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Areas
+      </a>
+      <ul
+        className="dropdown-menu w-100"
+        aria-labelledby="dropdownMenuButton"
+      >
+        {meals.map((meal, index) => (
+          <li key={index}>
+            <a
+              className="dropdown-item d-flex justify-content-between align-items-center"
+              href="#"
+            >
+              {meal.strArea}
+              <span className="badge bg-secondary">{meal.count}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
+  </div>
   );
 };
 
@@ -108,6 +112,7 @@ const SidebarComponent = () => {
               >
                 {meal.strCategory}
                 <span className="badge bg-secondary">12</span>{" "}
+               
               </a>
             </li>
           ))}
@@ -125,5 +130,6 @@ const ListComponent = () => {
     </div>
   );
 };
+
 
 export default ListComponent;
