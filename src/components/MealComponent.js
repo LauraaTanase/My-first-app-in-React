@@ -16,20 +16,14 @@ const mealCard = {
 
  const MealComponent = ({ strMeal, strMealThumb }) => {
   return (
-    <div className="col mb-4">
-      <div className="card" style={{ width: '18rem' }}>
-        <img
-          src={strMealThumb}
-          className="card-img-top"
-          alt={strMeal}
-          style={{ height: '200px', objectFit: 'cover' }}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{strMeal}</h5>
-          <p className="card-text">Delicious meal description goes here.</p>
+    <>
+      <div className="card m-2" style={{ width: '18rem' }}>
+        <img src={strMealThumb} className="card-img-top"></img>
+        <div className="card-body border border-3">
+          <p className="card-title">{strMeal}</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
  export default MealComponent;
