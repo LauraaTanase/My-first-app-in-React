@@ -1,9 +1,11 @@
 import React from "react";
 import SidebarComponent from "../components/SidebarComponent";
 import SideAreaComponent from "../components/SideAreaComponent";
-import { Link } from "react-router-dom"; // Adaugă acest import
+import { Link } from "react-router-dom";
 import ListComponent from "../components/ListComponent";
 
+
+//Aici se afla butonul de favorites si cred ca o sa trebuiasca mutat//
 export default function () {
   return (
     <div>
